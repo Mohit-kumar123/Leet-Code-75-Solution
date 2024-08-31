@@ -1,0 +1,28 @@
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        int x=word1.length();
+        int y=word2.length();
+      
+    vector<char>arr3(x+y);
+        int pi=0;
+        int ni=0;
+        int i=0;
+
+        while(pi<x && ni<y){
+            arr3[i++]=word1[pi++];
+            arr3[i++]=word2[ni++];
+        }
+
+        while(pi<x){
+            arr3[i++]=word1[pi++];
+        }
+        while(ni<y){
+            arr3[i++]=word2[ni++];
+        }
+        string str(arr3.begin(),arr3.end());
+
+        return str;
+        
+    }
+};
